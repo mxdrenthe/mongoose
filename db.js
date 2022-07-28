@@ -8,20 +8,7 @@ var User = new Schema({
 });
 
 mongoose.model('User', User);
-
-// Default Mongo URI is local
-const DOCKER = process.env.DOCKER
-if ( DOCKER === '1') {
-  var mongoUri = 'mongodb://goof-mongo/express-todo';
-} else {
-  var mongoUri = 'mongodb://localhost/express-todo';
-}
-
-
-if (process.env.MONGOLAB_URI) {
-  // Generic (plus Heroku) env var support
-  mongoUri = process.env.MONGOLAB_URI;
-}
+var mongoUri = 'mongodb://localhost/express-todo';
 console.log("Using Mongo URI " + mongoUri);
 
 mongoose.connect(mongoUri);

@@ -2,10 +2,9 @@
   "name": "mongoose",
   "version": "1.0.1",
   "description": "CTF app",
-  "homepage": "https://snyk.io/",
+  "homepage": "https://openweb.nl/",
   "scripts": {
-    "start": "node app.js",
-    "build": "browserify -r jquery > public/js/bundle.js"
+    "start": "node app.js"
   },
   "engines": {
     "node": "6.14.1"

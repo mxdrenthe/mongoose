@@ -9,8 +9,6 @@ exports.current_user = function (req, res, next) {
   next();
 };
 
-
-
 const users = [
   // You know password for the user.
   {name: 'user', password: 'pwd'},
@@ -27,8 +25,6 @@ function findUser(auth) {
     u.password === auth.password);
 }
 ///////////////////////////////////////////////////////////////////////////////
-
-
 
 exports.index = function (req, res, next) {
   console.log(req.body);
@@ -59,5 +55,3 @@ exports.index = function (req, res, next) {
   });
 
 };
-
-

@@ -1,26 +1,27 @@
 <% layout( 'layout' ) -%>
 <style>
 strong {font-weight: bold}
+div.list {text-align: center;}
 </style>
 <h1 id="page-title"><%= title %></h1>
 
 <% if( granted == true ){ %>
     <h3 id="list">You got the flag!</h3>
-    <center><%=flag%></center>
+    <%=flag%>
 <% } %>
 
 <div id="list">
   <form action="/" method="post" accept-charset="utf-8">
     <% if( granted == false ){ %>
     <div class="item-new">
-      <center>username</center>
+      username
       <input class="input" type="text" name="username" />
       <br/>
-      <center>password</center>
+      password
       <input class="input" type="password" name="password" />
-      <center>
+      <br/>
       <input type="submit">
-      </center>
+      
     </div>
     <% } %>
   </form>
